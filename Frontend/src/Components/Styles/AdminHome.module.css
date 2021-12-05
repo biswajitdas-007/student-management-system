@@ -1,0 +1,24 @@
+hr {
+  width: 100%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15%;
+}
+.leftContainer {
+  background-color: aqua;
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+}
+.navRoutes {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navRoutes:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+.container {
+}
+.addStudentHeading {
+  color: tomato;
+  text-align: center;
+}
+.formContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.inputField {
+  margin-top: 5% !important;
+  width: 20vw;
+}
+.submitBtn {
+  margin: 10px auto !important;
+}

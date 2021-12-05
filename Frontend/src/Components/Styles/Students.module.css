@@ -1,0 +1,43 @@
+.container {
+  height: 100%;
+}
+.container > div:first-child {
+  height: 100%;
+}
+.studentContainer {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 3%;
+  margin-top: 1%;
+  justify-content: center;
+}
+.studentContainer > div {
+  height: 20vw;
+  background-color: #3daeca;
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 10px;
+}
+.sortBtn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* contest css */
+
+.tagContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.tagContainer > div {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
+}

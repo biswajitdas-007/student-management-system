@@ -1,0 +1,47 @@
+.navLink {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: aqua;
+}
+.navLink > h1 {
+  text-align: center;
+  align-self: center !important;
+}
+.link {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  margin: auto 0;
+  height: 100%;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.contestContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  gap: 50px;
+  max-width: 100vw;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.contestContainer > div {
+  background-color: rgb(238, 224, 206);
+  padding: 10px;
+  border-radius: 5px;
+}
+.tagContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.tagContainer > div {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(193, 223, 250);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
+}
