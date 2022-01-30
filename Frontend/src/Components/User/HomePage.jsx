@@ -15,7 +15,7 @@ const HomePage = () => {
                 <Link to="/" className={styles.link}>Student Login</Link>
                 <Link to="/admin-login" className={styles.link}>Admin Login</Link>
             </div>
-            <div className={styles.contestContainer}>
+            {/* <div className={styles.contestContainer}>
                 {data && data.map((item) => {
                     var tags = item.tags.split(",");
                     var temp = [];
@@ -39,7 +39,7 @@ const HomePage = () => {
                         </div>
                     )
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }

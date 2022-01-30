@@ -88,7 +88,7 @@ const AddStudent = () => {
                             required
                         />
                     
-                    <Button color="primary" variant="contained" type="submit" className={styles.submitBtn}>Submit</Button>
+                    <Button color="primary" variant="outlined" type="submit" className={styles.submitBtn}>Submit</Button>
                    </div>
                 </form>
             </div>

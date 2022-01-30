@@ -1,6 +1,6 @@
 .heading {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 17%;
 }
 .adminForm {
   display: flex;
@@ -9,7 +9,9 @@
   padding: 30px;
   width: 35vw;
   margin: 0 auto;
+  background-color: #eee6ce;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
 }
 .fields {
   border: 1px solid red;

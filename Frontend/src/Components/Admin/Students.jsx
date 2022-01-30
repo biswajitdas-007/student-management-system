@@ -40,8 +40,8 @@ const Students = () => {
             <AdminHome/>
         <div className={styles.container}>
             <div className={styles.sortBtn}>
-                <Button variant="contained" size="medium" onClick={handleSortByName}>Sort by name</Button>
-                <Button variant="contained" size="medium" onClick={handleSortByAge}>Sort by age</Button>
+                <Button variant="contained" color="inherit" size="medium" onClick={handleSortByName} sx={{color:"black"}}>Sort by name</Button>
+                <Button variant="contained" size="medium" color="inherit" onClick={handleSortByAge} sx={{color:"black"}}>Sort by age</Button>
             </div>
             <div className={styles.studentContainer}>
             {studentsData && studentsData.map((student) => {

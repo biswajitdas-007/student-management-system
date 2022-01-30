@@ -65,10 +65,10 @@ const AdminLogin = () => {
                 <TextField
                     label="Username"
                     type="email"
-                    sx={{width:"100%", margin:"10px"}}
+                    sx={{width:"100%", margin:"10px", color:"white"}}
                     onChange={handleEmail}
                 />
-                <FormControl  variant="outlined" sx={{width:"100%", margin:"10px"}}>
+                <FormControl  variant="outlined" sx={{width:"100%", margin:"10px", borderColor:"red"}}>
                     <InputLabel>Password</InputLabel>
                     <OutlinedInput
                         type={values.showPassword ? 'text' : 'password'}
@@ -91,7 +91,7 @@ const AdminLogin = () => {
                     
                 </FormControl>
                 {isAuth && <Navigate to="/admin-home-page"/>}
-                <Button variant="contained" type="submit" className={styles.submitBtn}>Login</Button>
+                <Button variant="outlined" color="primary" type="submit" className={styles.submitBtn}>Login</Button>
                 
             </form>
         </div>

@@ -26,8 +26,8 @@ const Contests = () => {
             <AdminHome/>
         <div className={styles.container}>
             <div className={styles.sortBtn}>
-                <Button variant="contained" size="medium" onClick={handleFilter}>Filetr by DSA</Button>
-                <Button variant="contained" size="medium" onClick={handleFilter}>Filter by Coding</Button>
+                <Button variant="contained" size="medium" color="inherit" onClick={handleFilter} sx={{color:"black"}}>Filetr by DSA</Button>
+                <Button variant="contained" size="medium" color="inherit" onClick={handleFilter} sx={{color:"black"}}>Filter by Coding</Button>
             </div>
             <div className={styles.studentContainer}>
                 {contestData && contestData.map((contest) => {

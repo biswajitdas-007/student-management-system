@@ -8,7 +8,7 @@ nav {
   gap: 15%;
 }
 .leftContainer {
-  background-color: aqua;
+  background-color: #b8405e;
   text-align: center;
   height: 100%;
   padding: 20px;
@@ -17,6 +17,9 @@ nav {
   color: rgb(0, 0, 0);
   padding: 10px;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .navRoutes:hover {
