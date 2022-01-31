@@ -15,14 +15,27 @@ router.get("/students", async function (req, res) {
 })
 
 router.post("/students", async function (req, res) {
-     try {
+    try {
        const studentdomain = await Student.create(req.body);
     return res.send(studentdomain);
     } catch (error) {
         return res.status(400).send(error.message);
     }
 });
-
+router.post("/student-login", async function (req, res) {
+    try {
+        console.log("res: ",req.body);
+        const check = await Student.findOne({ "email": req.body.email });
+        if (check) {
+            return res.send(check);
+        } else {
+            return res.send("user-not-found");
+        }
+    }
+    catch (err){
+        return res.status(400).send(err.message);
+    }
+})
 router.delete("/:id", async function (req, res) {
     try {
         const studentdomain = await Student.findByIdAndDelete(req.params.id).lean();
