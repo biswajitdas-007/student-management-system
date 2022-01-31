@@ -36,9 +36,10 @@
   padding: 10px;
 }
 .contestContainer > div {
-  background-color: rgb(238, 224, 206);
+  background-color: #2eb086;
   padding: 10px;
   border-radius: 5px;
+  color: black;
 }
 .tagContainer {
   display: flex;

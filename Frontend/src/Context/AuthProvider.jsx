@@ -2,11 +2,15 @@ import { createContext, useState, useEffect, Children } from "react";
 const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
-    const [isAuth, setIsAuth] = useState(false);
-    const toggleAuth = () => {
-        setIsAuth(!isAuth);
+    const [adminAuth, setAdminAuth] = useState(false);
+    const [studentAuth, setStudentAuth] = useState(false);
+    const toggleAdminAuth = () => {
+        setAdminAuth(!adminAuth);
     }
-    const value = { isAuth, toggleAuth };
+    const toggleStudentAuth = () => {
+        setStudentAuth(!studentAuth);
+    }
+    const value = { adminAuth, studentAuth, toggleAdminAuth, toggleStudentAuth };
     return (
         <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
     )

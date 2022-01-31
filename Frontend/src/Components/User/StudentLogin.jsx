@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import axios from "axios";
 import { AuthContext } from "../../Context/AuthProvider";
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -12,8 +13,8 @@ import Button from '@mui/material/Button';
 import styles from "../Styles/AdminLogin.module.css";
 import { Navigate } from "react-router-dom";
 
-const AdminLogin = () => {
-    const { adminAuth, toggleAdminAuth } = useContext(AuthContext);
+const StudentLogin = () => {
+    const { studentAuth, toggleStudentAuth } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [values, setValues] =useState({
         amount: '',
@@ -42,24 +43,15 @@ const AdminLogin = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        var isTrue = false;
-        var i = email.length - 16;
-        var str = "";
-        for (i; i < email.length; i++){
-            str += email[i];
-        }
-        if (str == ".masaischool.com") {
-            isTrue = true;
-        }
-        if (isTrue) {
-            toggleAdminAuth()
-        } else {
-            alert("Wrong Credentials")
-        }
+        axios.post("http://localhost:4000/student-login", { "email": email }).then(res => {
+            if (res.data !== "user-not-found") {
+                toggleStudentAuth();
+            }
+        }).catch(err => console.log(err));
     }
     return (
         <div>
-            <h2 className={styles.heading}>Admin Login</h2>
+            <h2 className={styles.heading}>Student Login</h2>
             <form action="" className={styles.adminForm} onSubmit={handleSubmit}>
                 <TextField
                     label="Username"
@@ -89,7 +81,7 @@ const AdminLogin = () => {
                     />
                     
                 </FormControl>
-                {adminAuth && <Navigate to="/admin-home-page"/>}
+                {studentAuth && <Navigate to="/student-dashboard"/>}
                 <Button variant="outlined" color="primary" type="submit" className={styles.submitBtn}>Login</Button>
                 
             </form>
@@ -97,4 +89,4 @@ const AdminLogin = () => {
     )
 }
 
-export default AdminLogin;
+export default StudentLogin;

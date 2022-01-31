@@ -48,6 +48,7 @@ const Students = () => {
                 return (
                     <div key={student._id} className={styles.studentBox}>
                         <h1>{student.name}</h1>
+                        <p>Email: {student.email}</p>
                         <p>Education: {student.education}</p>
                         <p>City: {student.city}</p>
                         <p>Gender: {student.gender}</p>

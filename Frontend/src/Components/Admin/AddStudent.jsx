@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import styles from "../Styles/AddStudent.module.css";
 const initState = {
     name: "",
+    email:"",
     city: "",
     age: "",
     education: "",
@@ -14,7 +15,7 @@ const initState = {
 }
 const AddStudent = () => {
      const [data, setData] = useState(initState);
-    const { name, city, age, education, gender, contact } = data;
+    const { name, city, age, education, gender, contact, email } = data;
     const handleChange = (e) => {
         const { name, value } = e.target;
         setData({ ...data, [name]: value });
@@ -41,6 +42,14 @@ const AddStudent = () => {
                             label="Full Name"
                             name="name"
                             value={name}
+                            onChange={handleChange}
+                            className={styles.inputField}
+                            required
+                            />
+                            <TextField
+                            label="Email"
+                            name="email"
+                            value={email}
                             onChange={handleChange}
                             className={styles.inputField}
                             required
