@@ -46,6 +46,8 @@ const StudentLogin = () => {
         axios.post("http://localhost:4000/student-login", { "email": email }).then(res => {
             if (res.data !== "user-not-found") {
                 toggleStudentAuth();
+            } else {
+                alert("Wrong email !!!")
             }
         }).catch(err => console.log(err));
     }

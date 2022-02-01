@@ -7,6 +7,7 @@ import AdminHome from "./AdminHome";
 const Contests = () => {
     const [contestData, setContestData] = useState([]);
     const handleDelete = (id) => {
+        // sending contest id to backend to delete a contest
         axios.delete(`http://localhost:4000/contest/${id}`).then(res => getData())
             .catch(err => console.log("err: ", err));
     }
@@ -14,6 +15,7 @@ const Contests = () => {
         
     }
     const getData = () => {
+        //get all contest from backend
         axios.get("http://localhost:4000/contest")
             .then(res => setContestData(res.data))
             .catch(err => console.log(err));
@@ -29,7 +31,8 @@ const Contests = () => {
                 <Button variant="contained" size="medium" color="inherit" onClick={handleFilter} sx={{color:"black"}}>Filetr by DSA</Button>
                 <Button variant="contained" size="medium" color="inherit" onClick={handleFilter} sx={{color:"black"}}>Filter by Coding</Button>
             </div>
-            <div className={styles.studentContainer}>
+                <div className={styles.studentContainer}>
+                    {/** displaying all contests*/}
                 {contestData && contestData.map((contest) => {
                     var tags = contest.tags.split(",");
                     var temp = [];

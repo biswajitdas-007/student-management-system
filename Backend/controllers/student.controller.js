@@ -24,7 +24,6 @@ router.post("/students", async function (req, res) {
 });
 router.post("/student-login", async function (req, res) {
     try {
-        console.log("res: ",req.body);
         const check = await Student.findOne({ "email": req.body.email });
         if (check) {
             return res.send(check);

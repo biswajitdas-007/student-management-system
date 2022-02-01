@@ -5,6 +5,7 @@ const AdminHome = () => {
     return (
         <div className={styles.container}>
             <div className={styles.leftContainer}>
+                {/** navigation routes links */}
                 <nav>
                     <Link to="/admin-home-page" className={styles.navRoutes}>Students</Link>
                     <Link to="/add-student" className={styles.navRoutes}>Add Student</Link>

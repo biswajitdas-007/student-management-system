@@ -14,14 +14,17 @@ const initState = {
     contact: "",
 }
 const AddStudent = () => {
-     const [data, setData] = useState(initState);
+    const [data, setData] = useState(initState);
+    //destructuring data and get the keys
     const { name, city, age, education, gender, contact, email } = data;
+    //storing students data
     const handleChange = (e) => {
         const { name, value } = e.target;
         setData({ ...data, [name]: value });
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        //sending students data to backend
         axios.post("http://localhost:4000/students", data)
             .then(res => alert("Succefully added data!"))
             .catch(err => console.log(err))

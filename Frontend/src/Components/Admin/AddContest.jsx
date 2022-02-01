@@ -12,8 +12,10 @@ const initState = {
     tags: ""
 }
 const AddContest = () => {
-     const [data, setData] = useState(initState);
-    const { title, type, startTime, endTime,tags} = data;
+    const [data, setData] = useState(initState);
+    // destructuring data and get the keys
+    const { title, type, startTime, endTime, tags } = data;
+    //storing the contest data
     const handleChange = (e) => {
         const { name, value } = e.target;
         console.log(data)
@@ -21,6 +23,7 @@ const AddContest = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        //send data to backend to add it in database
         axios.post("http://localhost:4000/contest", data)
             .then(res => alert("Succefully added data!"))
             .catch(err => console.log(err))
