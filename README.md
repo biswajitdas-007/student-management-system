@@ -1,4 +1,4 @@
-# Goibibo Clone :sunglasses:
+# Student Management System :sunglasses:
 
 ```
   This website is helpful for manage students data and add contest for students. An admin need to add students details in the backend then only a students access his account by the mail which is present in the backend or provided by the school/collge. After a student is logged in he/she can view the contest are available for them.
